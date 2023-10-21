@@ -1,0 +1,13 @@
+node_modules/
+
+.env
+
+*.log
+
+build/
+*.tmp
+*.swp
+*.swo
+.DS_Store
+
+.cache/
