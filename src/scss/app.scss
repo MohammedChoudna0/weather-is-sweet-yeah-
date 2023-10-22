@@ -1,4 +1,10 @@
 @import 'base/normalize';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/globales';
+@import 'layout/navegacion';
+@import 'layout/form';
+@import 'layout/items';
+@import 'layout/bigItem';
+

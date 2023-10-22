@@ -1,0 +1,15 @@
+@include tablet {
+    #left-side{
+        border-top-left-radius: 25px !important;
+        border-bottom-left-radius: 25px !important;
+        border-top-right-radius: 0 !important;
+        border-top-right-radius: 25px ;
+    }
+    #right-side{
+        border-top-right-radius: 25px !important;
+        border-bottom-right-radius: 25px !important;
+    }
+
+
+}
+
