@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navegacion px-0 my-0">
+        <nav class="navbar bg-body-tertiary mt-1">
+          <div class="container-fluid">
+            <a class="navbar-brand">
+              <picture>
+                <source srcset="build/img/logo.avif" type="image/avif" />
+                <img loading="lazy" src="build/img/logo.svg" alt="logo" />
+              </picture>
+            </a>
+            <div class="d-flex">
+              <picture class="me-3" id="search">
+                <source srcset="build/img/icon-lupa.avif" type="image/avif" />
+                <img
+                  loading="lazy"
+                  src="build/img/icon-lupa.svg"
+                  alt="icon search"
+                />
+              </picture>
+              <picture class="home">
+                <source srcset="build/img/icon-house.avif" type="image/avif" />
+                <img
+                  loading="lazy"
+                  src="build/img/icon-house.svg"
+                  alt="icon home"
+                />
+              </picture>
+            </div>
+          </div>
+        </nav>
+        <hr class="my-0 py-0" />
+      </div>
+    </header>
+    <main>
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-11 col-md-8 col-lg-6">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control input-left-rounded"
+                placeholder="Location"
+                aria-label="Location"
+                aria-describedby="button-addon"
+              />
+              <button class="btn" type="button" id="button-addon">
+                <picture>
+                  <source
+                    srcset="build/img/icon-location.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="build/img/icon-location.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="build/img/icon-location.png"
+                    alt="Icon location"
+                  />
+                </picture>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5 justify-content-center">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="item row my-3 justify-content-center mx-auto "
+            >
+              <div class="col-5 text-center m-0 p-0">
+                <picture>
+                  <source
+                    srcset="build/img/icon-clouds.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="build/img/icon-clouds.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="build/img/icon-clouds.png"
+                    alt="Icon cloudy"
+                  />
+                </picture>
+              </div>
+              <div class="col-7 text-center">
+                <p class="p-0 m-0 text-start">PAMPLONA</p>
+                <div class="row justify-content-between">
+                  <div class="col-4">
+                    <div>
+                      <p class="item-info">1</p>
+                      <picture>
+                        <source
+                          srcset="build/img/icon-wind.avif"
+                          type="image/avif"
+                        />
+                        <source
+                          srcset="build/img/icon-wind.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          class="item-icon"
+                          loading="lazy"
+                          src="build/img/icon-wind.png"
+                          alt="Icon sun"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-humidity.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-humidity.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-humidity.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-rainy.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-rainy.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-rainy.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="item row my-3 justify-content-center mx-auto "
+            >
+              <div class="col-5 text-center m-0 p-0">
+                <picture>
+                  <source
+                    srcset="build/img/icon-clouds.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="build/img/icon-clouds.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="build/img/icon-clouds.png"
+                    alt="Icon cloudy"
+                  />
+                </picture>
+              </div>
+              <div class="col-7 text-center">
+                <p class="p-0 m-0 text-start ">PAMPLONA</p>
+                <div class="row justify-content-between">
+                  <div class="col-4">
+                    <div>
+                      <p class="item-info">1</p>
+                      <picture>
+                        <source
+                          srcset="build/img/icon-wind.avif"
+                          type="image/avif"
+                        />
+                        <source
+                          srcset="build/img/icon-wind.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          class="item-icon"
+                          loading="lazy"
+                          src="build/img/icon-wind.png"
+                          alt="Icon sun"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-humidity.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-humidity.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-humidity.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-rainy.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-rainy.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-rainy.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="item row my-3 justify-content-center mx-auto "
+            >
+              <div class="col-5 text-center m-0 p-0">
+                <picture>
+                  <source
+                    srcset="build/img/icon-clouds.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="build/img/icon-clouds.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="build/img/icon-clouds.png"
+                    alt="Icon cloudy"
+                  />
+                </picture>
+              </div>
+              <div class="col-7 text-center">
+                <p class="p-0 m-0 text-start">PAMPLONA</p>
+                <div class="row justify-content-between">
+                  <div class="col-4">
+                    <div>
+                      <p class="item-info">1</p>
+                      <picture>
+                        <source
+                          srcset="build/img/icon-wind.avif"
+                          type="image/avif"
+                        />
+                        <source
+                          srcset="build/img/icon-wind.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          class="item-icon"
+                          loading="lazy"
+                          src="build/img/icon-wind.png"
+                          alt="Icon sun"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-humidity.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-humidity.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-humidity.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-rainy.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-rainy.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-rainy.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="item row my-3 justify-content-center mx-auto "
+            >
+              <div class="col-5 text-center m-0 p-0">
+                <picture>
+                  <source
+                    srcset="build/img/icon-clouds.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="build/img/icon-clouds.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="build/img/icon-clouds.png"
+                    alt="Icon cloudy"
+                  />
+                </picture>
+              </div>
+              <div class="col-7 text-center">
+                <p class="p-0 m-0 text-start">PAMPLONA</p>
+                <div class="row justify-content-between">
+                  <div class="col-4">
+                    <div>
+                      <p class="item-info">1</p>
+                      <picture>
+                        <source
+                          srcset="build/img/icon-wind.avif"
+                          type="image/avif"
+                        />
+                        <source
+                          srcset="build/img/icon-wind.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          class="item-icon"
+                          loading="lazy"
+                          src="build/img/icon-wind.png"
+                          alt="Icon sun"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-humidity.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-humidity.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-humidity.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-rainy.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-rainy.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-rainy.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="item row my-3 justify-content-center mx-auto "
+            >
+              <div class="col-5 text-center m-0 p-0">
+                <picture>
+                  <source
+                    srcset="build/img/icon-clouds.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="build/img/icon-clouds.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="build/img/icon-clouds.png"
+                    alt="Icon cloudy"
+                  />
+                </picture>
+              </div>
+              <div class="col-7 text-center">
+                <p class="p-0 m-0 text-start">PAMPLONA</p>
+                <div class="row justify-content-between">
+                  <div class="col-4">
+                    <div>
+                      <p class="item-info">1</p>
+                      <picture>
+                        <source
+                          srcset="build/img/icon-wind.avif"
+                          type="image/avif"
+                        />
+                        <source
+                          srcset="build/img/icon-wind.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          class="item-icon"
+                          loading="lazy"
+                          src="build/img/icon-wind.png"
+                          alt="Icon sun"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-humidity.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-humidity.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-humidity.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-rainy.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-rainy.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-rainy.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="item row my-3 justify-content-center mx-auto "
+            >
+              <div class="col-5 text-center m-0 p-0">
+                <picture>
+                  <source
+                    srcset="build/img/icon-clouds.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="build/img/icon-clouds.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    src="build/img/icon-clouds.png"
+                    alt="Icon cloudy"
+                  />
+                </picture>
+              </div>
+              <div class="col-7 text-center">
+                <p class="p-0 m-0 text-start">PAMPLONA</p>
+                <div class="row justify-content-between">
+                  <div class="col-4">
+                    <div>
+                      <p class="item-info">1</p>
+                      <picture>
+                        <source
+                          srcset="build/img/icon-wind.avif"
+                          type="image/avif"
+                        />
+                        <source
+                          srcset="build/img/icon-wind.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          class="item-icon"
+                          loading="lazy"
+                          src="build/img/icon-wind.png"
+                          alt="Icon sun"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-humidity.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-humidity.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-humidity.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-4">
+                    <p class="item-info">1</p>
+                    <picture>
+                      <source
+                        srcset="build/img/icon-rainy.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-rainy.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        class="item-icon"
+                        loading="lazy"
+                        src="build/img/icon-rainy.png"
+                        alt="Icon sun"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--############################PRUEBA#############################-->
+      <div class="container my-5 justify-content-center  ">
+        <div class="row">
+          <div class="col-12 col-md-5 col-lg-4 bg-primary" id="left-side">
+            <h1>Rīga, LV</h1>
+            <h2>overcast clouds</h2>
+            <picture>
+              <source srcset="build/img/icon-clouds.avif" type="image/avif" />
+              <source srcset="build/img/icon-clouds.webp" type="image/webp" />
+              <img loading="lazy" src="build/img/icon-clouds.png" alt="Icon humidity" />
+            </picture>
+            <h1>7°C</h1>
+          </div>
+          <div class="col-12 col-md-7 col-lg-8 bg-secondary part2" id="right-side">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div
+                  class="item row my-3 justify-content-center mx-auto "
+                >
+                  <div class="col-5 text-center m-0 p-0">
+                    <picture>
+                      <source
+                        srcset="build/img/image.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/image.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="build/img/image.png"
+                        alt="Icon cloudy"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-7 text-center">
+                    <p class="p-0 m-0 text-start">Humidity</p>
+                    <div class="row justify-content-between">
+                      <div class="col-4">
+                        <div>
+                          <p class="item-info">1</p>
+                          <picture>
+                            <source
+                              srcset="build/img/icon-wind.avif"
+                              type="image/avif"
+                            />
+                            <source
+                              srcset="build/img/icon-wind.webp"
+                              type="image/webp"
+                            />
+                            <img
+                              class="item-icon"
+                              loading="lazy"
+                              src="build/img/icon-wind.png"
+                              alt="Icon sun"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-humidity.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-humidity.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-humidity.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-rainy.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-rainy.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-rainy.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div
+                  class="item row my-3 justify-content-center mx-auto "
+                >
+                  <div class="col-5 text-center m-0 p-0">
+                    <picture>
+                      <source
+                        srcset="build/img/icon-colored-wind.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-colored-wind.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="build/img/icon-colored-wind.png"
+                        alt="Icon wind"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-7 text-center">
+                    <p class="p-0 m-0 text-start ">Wind Speed</p>
+                    <div class="row justify-content-between">
+                      <div class="col-4">
+                        <div>
+                          <p class="item-info">1</p>
+                          <picture>
+                            <source
+                              srcset="build/img/icon-wind.avif"
+                              type="image/avif"
+                            />
+                            <source
+                              srcset="build/img/icon-wind.webp"
+                              type="image/webp"
+                            />
+                            <img
+                              class="item-icon"
+                              loading="lazy"
+                              src="build/img/icon-wind.png"
+                              alt="Icon sun"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-humidity.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-humidity.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-humidity.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-rainy.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-rainy.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-rainy.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div
+                  class="item row my-3 justify-content-center mx-auto "
+                >
+                  <div class="col-5 text-center m-0 p-0">
+                    <picture>
+                      <source
+                        srcset="build/img/icon-wind-direction.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-wind-direction.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="build/img/icon-wind-direction.png"
+                        alt="Icon cloudy"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-7 text-center">
+                    <p class="p-0 m-0 text-start">Direction</p>
+                    <div class="row justify-content-between">
+                      <div class="col-4">
+                        <div>
+                          <p class="item-info">1</p>
+                          <picture>
+                            <source
+                              srcset="build/img/icon-wind.avif"
+                              type="image/avif"
+                            />
+                            <source
+                              srcset="build/img/icon-wind.webp"
+                              type="image/webp"
+                            />
+                            <img
+                              class="item-icon"
+                              loading="lazy"
+                              src="build/img/icon-wind.png"
+                              alt="Icon sun"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-humidity.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-humidity.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-humidity.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-rainy.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-rainy.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-rainy.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 ">
+                <div
+                  class="item row my-3 justify-content-center mx-auto "
+                >
+                  <div class="col-5 text-center m-0 p-0">
+                    <picture>
+                      <source
+                        srcset="build/img/icon-sunrise.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-sunrise.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="build/img/icon-sunrise.png"
+                        alt="Icon cloudy"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-7 text-center">
+                    <p class="p-0 m-0 text-start">Sunrise</p>
+                    <div class="row justify-content-between">
+                      <div class="col-4">
+                        <div>
+                          <p class="item-info">1</p>
+                          <picture>
+                            <source
+                              srcset="build/img/icon-wind.avif"
+                              type="image/avif"
+                            />
+                            <source
+                              srcset="build/img/icon-wind.webp"
+                              type="image/webp"
+                            />
+                            <img
+                              class="item-icon"
+                              loading="lazy"
+                              src="build/img/icon-wind.png"
+                              alt="Icon sun"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-humidity.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-humidity.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-humidity.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-rainy.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-rainy.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-rainy.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 ">
+                <div
+                  class="item row my-3 justify-content-center mx-auto "
+                >
+                  <div class="col-5 text-center m-0 p-0">
+                    <picture>
+                      <source
+                        srcset="build/img/icon-sunset.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-sunset.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="build/img/icon-sunset.png"
+                        alt="Icon cloudy"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-7 text-center">
+                    <p class="p-0 m-0 text-start">Sunset</p>
+                    <div class="row justify-content-between">
+                      <div class="col-4">
+                        <div>
+                          <p class="item-info">1</p>
+                          <picture>
+                            <source
+                              srcset="build/img/icon-wind.avif"
+                              type="image/avif"
+                            />
+                            <source
+                              srcset="build/img/icon-wind.webp"
+                              type="image/webp"
+                            />
+                            <img
+                              class="item-icon"
+                              loading="lazy"
+                              src="build/img/icon-wind.png"
+                              alt="Icon sun"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-humidity.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-humidity.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-humidity.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-rainy.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-rainy.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-rainy.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 ">
+                <div
+                  class="item row my-3 justify-content-center mx-auto "
+                >
+                  <div class="col-5 text-center m-0 p-0">
+                    <picture>
+                      <source
+                        srcset="build/img/icon-sunset.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="build/img/icon-sunset.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="build/img/icon-sunset.png"
+                        alt="Icon cloudy"
+                      />
+                    </picture>
+                  </div>
+                  <div class="col-7 text-center">
+                    <p class="p-0 m-0 text-start">Sunset</p>
+                    <div class="row justify-content-between">
+                      <div class="col-4">
+                        <div>
+                          <p class="item-info">1</p>
+                          <picture>
+                            <source
+                              srcset="build/img/icon-wind.avif"
+                              type="image/avif"
+                            />
+                            <source
+                              srcset="build/img/icon-wind.webp"
+                              type="image/webp"
+                            />
+                            <img
+                              class="item-icon"
+                              loading="lazy"
+                              src="build/img/icon-wind.png"
+                              alt="Icon sun"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-humidity.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-humidity.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-humidity.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                      <div class="col-4">
+                        <p class="item-info">1</p>
+                        <picture>
+                          <source
+                            srcset="build/img/icon-rainy.avif"
+                            type="image/avif"
+                          />
+                          <source
+                            srcset="build/img/icon-rainy.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            class="item-icon"
+                            loading="lazy"
+                            src="build/img/icon-rainy.png"
+                            alt="Icon sun"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+
+      
+    </main>
+
+    <script src="build/js/bundle.min.js"></script>
+  </body>
+</html>
