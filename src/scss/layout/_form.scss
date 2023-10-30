@@ -4,9 +4,28 @@
     background-color: $gris !important;
     img {
         height: 3rem;
+        padding: 0.1rem;
     
       }
 }
+#button-search {
+    img {
+        height: 0.5rem !important;
+    
+      }
+}
+
+
+.btn-circle {
+    width: 4rem;
+    height: 4rem;
+    padding: .1rem;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
 
 
 .input-left-rounded {
