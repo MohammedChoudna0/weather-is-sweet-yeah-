@@ -11,6 +11,7 @@ $(function() {
         $(".in-container").show();
         $(".items-container").show();
         $(".bigItem-container").hide();
+        $(".forecast-container").hide();
     });
     $(".dark-mode-button").on('click', function() {
         $("body").toggleClass("dark-mode");
