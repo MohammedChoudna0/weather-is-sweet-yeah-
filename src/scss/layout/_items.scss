@@ -3,6 +3,14 @@
     padding: .5rem;
     width:95% !important;
     border-radius: 2rem !important;
+    border: 1px solid;
+    border-color: rgb(104, 166, 229);
+    
+
+
+    &:hover{
+        transform: scale(1.05);
+    }
     img {
         width: 100%;
         padding:1rem ;
@@ -20,3 +28,10 @@
     }
 
 }
+.items-container{
+    .item{
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+

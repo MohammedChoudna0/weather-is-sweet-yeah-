@@ -1,15 +1,44 @@
 #button-addon {
     border-top-right-radius: 25px !important;
     border-bottom-right-radius: 25px !important;
-    background-color: $gris !important;
+    background-color: $light !important;
     img {
         height: 3rem;
+        padding: 0.1rem;
     
       }
 }
+
+
+.btn-circle {
+    width: 4rem;
+    height: 4rem;
+    padding: .1rem;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+    background-color: $light;
+}
+
 
 
 .input-left-rounded {
     border-top-left-radius: 25px !important;
     border-bottom-left-radius: 25px !important;
 }
+
+.hero{
+    background-image: url('../img/background.jpg');
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-size: cover;
+
+}   
+ @include tablet {
+        .hero{
+            height: 60vh;
+        }
+    }
