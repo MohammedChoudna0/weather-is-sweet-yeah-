@@ -1,16 +1,10 @@
 #button-addon {
     border-top-right-radius: 25px !important;
     border-bottom-right-radius: 25px !important;
-    background-color: $gris !important;
+    background-color: $light !important;
     img {
         height: 3rem;
         padding: 0.1rem;
-    
-      }
-}
-#button-search {
-    img {
-        height: 0.5rem !important;
     
       }
 }
@@ -24,6 +18,7 @@
     text-align: center;
     font-size: 12px;
     line-height: 1.42857;
+    background-color: $light;
 }
 
 
@@ -32,3 +27,18 @@
     border-top-left-radius: 25px !important;
     border-bottom-left-radius: 25px !important;
 }
+
+.hero{
+    background-image: url('../img/background.jpg');
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-size: cover;
+
+}   
+ @include tablet {
+        .hero{
+            height: 60vh;
+        }
+    }

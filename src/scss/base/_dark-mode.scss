@@ -1,39 +1,39 @@
 .dark-mode {
-    background-color: darken($grisOscuro, 10);
+    background-color: darken(#7695b5c4, 10);
+    
 
     p {
         color: $blanco;
     }
 
     a, h1,h2,h3,h4  {
-        color: $gris;
+        color: $blanco;
     }
-
-    .anuncio, 
-    .resumen-propiedad {
-        background-color: $grisOscuro;
-        border: 1px solid $grisOscuro;
-        .icono {
-            filter: invert(100%);
+    .item{
+        background-color:#77aaff ;
+        border: 1px solid;
+        border-color: rgb(255, 255, 255);
         }
+
+
+    .icon{
+        filter: invert(100%);
+    }
+    .btn-circle{
+        background-color: #77aaff;
+    }
+    #button-addon{
+        background-color: #77aaff !important;
+
+    }
+    #left-side{
+        background-color: $dark;
+    }
+    #right-side{
+        background-color: $light;
     }
     
-   
-    .formulario {
-        label,
-        legend,
-        p {
-            color: $gris;
-        }
-
-        input:not([type="submit"]), 
-        textarea,
-        select {
-            background-color: $grisOscuro;
-            border: 1px solid $grisOscuro;
-            color: $blanco;
-        }
-    }
-
-  
 }
+
+
+

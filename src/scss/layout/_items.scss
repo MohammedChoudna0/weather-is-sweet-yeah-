@@ -3,7 +3,10 @@
     padding: .5rem;
     width:95% !important;
     border-radius: 2rem !important;
-    transition: transform 0.3s ease-in-out; /* Esto hace que el cambio de tamaño sea suave */
+    border: 1px solid;
+    border-color: rgb(104, 166, 229);
+    
+
 
     &:hover{
         transform: scale(1.05);
@@ -24,5 +27,11 @@
         font-size: 1.5rem !important;
     }
 
+}
+.items-container{
+    .item{
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
 }
 

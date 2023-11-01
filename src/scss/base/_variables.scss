@@ -6,22 +6,20 @@ $fuente_principal: 'Lato', sans-serif;
 
 // Colores
 $negro: #000000;
-$amarillo: #E08709;;
 $verde: #71B100;
 $blanco: #FFFFFF;
-$gris: #e1e1e18d;
-$grisOscuro: #333333;
-$rojo: rgba(240, 38, 38, 0.414);
+$light:         #e5e3e3;
+$dark:           #c2c1c1;
 
 
-$primary:       #6cd0ff;
+
+$primary:       #c5cefd;
 $secondary:     $gray-600;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
-$light:         $gray-100;
-$dark:          $gray-900;
+
 
 $separacion: 5rem;
 

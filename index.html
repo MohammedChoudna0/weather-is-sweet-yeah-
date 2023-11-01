@@ -12,85 +12,82 @@
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
   <body>
-    <header>
-      <div class="container navegacion px-0 my-0">
-        <nav class="navbar bg-body-tertiary mt-1">
-          <div class="container-fluid d-flex justify-content-between">
-            <a class="navbar-brand">
-              <picture>
-                <source srcset="build/img/logo.avif" type="image/avif" />
-                <img loading="lazy" src="build/img/logo.svg" alt="logo" />
-              </picture>
-            </a>
-            
-            <div>
-              <img class="mx-auto" src="build/img/dark-mode.svg">
+    <header class="my-0 py-0">
+      <div class="w-100 bg-body-transparent">
+        <div class="container navegacion px-0 my-0 ">
+          <nav class="navbar  mt-1">
+            <div class="container-fluid d-flex justify-content-between">
+              <a class="navbar-brand">
+                <picture>
+                  <source srcset="build/img/logo.avif" type="image/avif" />
+                  <img loading="lazy" src="build/img/logo.svg" alt="logo" />
+                </picture>
+              </a>
+              
+              <div class="dark-mode-button icon">
+                <img class="mx-auto" src="build/img/dark-mode.svg">
+              </div>
+          
+              <a class="d-flex align-items-center" id="home">
+                <picture class="icon">
+                  <source srcset="build/img/icon-house.avif" type="image/avif" />
+                  <img
+                    loading="lazy"
+                    src="build/img/icon-house.svg"
+                    alt="icon home"
+                  />
+                </picture>
+              </a>
             </div>
-        
-            <a class="d-flex align-items-center">
-              <picture id="home">
-                <source srcset="build/img/icon-house.avif" type="image/avif" />
-                <img
-                  loading="lazy"
-                  src="build/img/icon-house.svg"
-                  alt="icon home"
-                />
-              </picture>
-            </a>
-          </div>
-        </nav>
+          </nav>
+        </div>
         <hr class="my-0 py-0" />
       </div>
+      
     </header>
     <main>
-      <div class="container mt-5 in-container">
-        <div class="row justify-content-center">
-          <div class="col-10 col-md-8 col-lg-6">
-            <form action="" id ="location-form">
-              <div class="input-group mb-3">
-                <input id="location-input"
-                  type="text"
-                  class="form-control input-left-rounded"
-                  placeholder="Location"
-                  aria-label="Location"
-                  aria-describedby="button-addon"
-                />
-                <button class="btn" type="button" id="button-addon">
-                  <picture>
-                    <source
-                      srcset="build/img/icon-lupa.avif"
-                      type="image/avif"
-                    />     
-                    <img 
-                      loading="lazy"
-                      src="build/img/icon-lupa.svg"
-                      alt="Icon location"
-                    />
-                  </picture>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col-2">
-            <button type="button" class="btn  btn-circle border border-1"><picture>
-              <source
-                srcset="build/img/icon-location.avif"
-                type="image/avif"
-              />
-              <source
-                srcset="build/img/icon-location.webp"
-                type="image/webp"
-              />
-              <img 
-                loading="lazy"
-                src="build/img/icon-location.png"
-                alt="Icon location"
-              />
-            </picture></i>
-            </button>
+      <div class="w-100 hero d-flex align-items-center" >
+        <div class="container my-auto">
+          <div class="row justify-content-center ">
+            <div class="col-10 col-md-8 col-lg-6">
+              <form action="" id ="location-form">
+                <div class="input-group mb-3">
+                  <input id="location-input"
+                    type="text"
+                    class="form-control input-left-rounded"
+                    placeholder="Location"
+                    aria-label="Location"
+                    aria-describedby="button-addon"
+                  />
+                  <button class="btn" type="submit" id="button-addon">
+                    <picture class="icon">
+                      <source
+                        srcset="build/img/icon-lupa.avif"
+                        type="image/avif"
+                      />     
+                      <img 
+                        loading="lazy"
+                        src="build/img/icon-lupa.svg"
+                        alt="Icon location"
+                      />
+                    </picture>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn  btn-circle border border-1 " id="location-button">
+                <picture class="icon">
+                  <source srcset="build/img/icon-location.avif" type="image/avif" />
+                  <source srcset="build/img/icon-location.webp" type="image/webp" />
+                  <img loading="lazy" src="build/img/icon-location.png" alt="Icon location" />
+                </picture>
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      
 
       <div class="container mt-5 justify-content-center items-container">
         <div class="row">
@@ -98,20 +95,46 @@
         </div>
       </div>
 
+      <div class="container error" >
+          <p class="display-3 mx-auto">Lo siento, no se han encontrado resultados.</p>
+      </div>
+      <!-- <div id="loader" style="display: none;">Cargando...</div> -->
+
       <!--############################PRUEBA#############################-->
+      <div class="d-flex justify-content-center align-items-center mt-5 ">
+        <div id="loader" style="display: none;">
+          <div class="spinner-grow text-primary" role="status" style="animation-delay: 0s;">
+          </div>
+          <div class="spinner-grow text-secondary" role="status" style="animation-delay: 0.3s;">
+          </div>
+          <div class="spinner-grow text-success" role="status" style="animation-delay: 0.6s;">
+          </div>
+          <div class="spinner-grow text-danger" role="status" style="animation-delay: 0.9s;">
+          </div>
+          <div class="spinner-grow text-warning" role="status" style="animation-delay: 1.1s;">
+          </div>
+          <div class="spinner-grow text-info" role="status" style="animation-delay: 1.4s;">
+          </div>
+          <div class="spinner-grow text-light" role="status" style="animation-delay: 1.7s;">
+          </div>
+          <div class="spinner-grow text-dark" role="status" style="animation-delay: 2s;">
+          </div>
+        </div>
+
+      </div>
       <div class="container my-5 justify-content-center bigItem-container  ">
         <div class="row">
-          <div class="col-12 col-md-5 col-lg-4 bg-primary" id="left-side">
-            <h1 class="cityName"></h1>
+          <div class="col-12 col-md-5 col-lg-4 " id="left-side">
+            <h1 class="cityName fw-bold"></h1>
             <h2 class="description"></h2>
             <picture class="picture">
               <source srcset="build/img/01d.avif" type="image/avif" />
               <source srcset="build/img/01d.webp" type="image/webp" />
               <img loading="lazy" src="build/img/01d.png" alt="Icon Weather" />
             </picture>
-            <h1 class="temperature">7°C</h1>
+            <h1 class="temperature fw-bold"></h1>
           </div>
-          <div class="col-12 col-md-7 col-lg-8 bg-secondary part2" id="right-side">
+          <div class="col-12 col-md-7 col-lg-8  part2" id="right-side">
             <div class="row">
               <div class="col-12 col-md-6">
                 <div
@@ -136,7 +159,7 @@
                   </div>
                   <div class="col-7 text-center">
                     <p class="p-0 m-0 text-start ">Humidity</p>
-                    <p class="lead display-3 mx-auto humidity">10</p>
+                    <p class="lead display-3 mx-auto humidity"></p>
                   </div>
                 </div>
               </div>
@@ -163,7 +186,7 @@
                   </div>
                   <div class="col-7 text-center">
                     <p class="p-0 m-0 text-start  ">Wind Speed</p>
-                    <p class="lead display-3 mx-auto wind">10</p>
+                    <p class="lead display-3 mx-auto wind"></p>
                   </div>
                 </div>
               </div>
@@ -190,7 +213,7 @@
                   </div>
                   <div class="col-7 text-center">
                     <p class="p-0 m-0 text-start ">Direction</p>
-                    <p class="lead display-3 mx-auto direction">10</p>
+                    <p class="lead display-3 mx-auto direction"></p>
                   </div>
                 </div>
               </div>
@@ -217,7 +240,7 @@
                   </div>
                   <div class="col-7 text-center">
                     <p class="p-0 m-0 text-start ">Visibility</p>
-                    <p class="lead display-3 mx-auto visibility ">10</p>
+                    <p class="lead display-3 mx-auto visibility "></p>
                   </div>
                 </div>
               </div>
@@ -244,7 +267,7 @@
                   </div>
                   <div class="col-7 text-center">
                     <p class="p-0 m-0 text-start ">Sunset</p>
-                    <p class="lead display-3 mx-auto sunset">10</p>
+                    <p class="lead display-3 mx-auto sunset"></p>
                   </div>
                 </div>
               </div>
@@ -271,7 +294,7 @@
                   </div>
                   <div class="col-7 text-center">
                     <p class="p-0 m-0 text-start">Sunrise</p>
-                    <p class="lead display-3 mx-auto sunrise">10</p>
+                    <p class="lead display-3 mx-auto sunrise"></p>
                   </div>
                 </div>
               </div>
@@ -279,6 +302,16 @@
           </div>
         </div>
       </div>
+      <!-- HTML --> 
+
+        
+      <div class="container bg-light forecast-container">
+        <div class="row">
+          <!--Forecast items-->
+          
+        </div>
+      </div>
+
     </main>
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="build/js/bundle.min.js"></script>

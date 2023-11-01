@@ -4,12 +4,28 @@
         border-bottom-left-radius: 25px !important;
         border-top-right-radius: 0 !important;
         border-top-right-radius: 25px ;
+        border: 1px solid #000000;
+        border-right: 0;
     }
     #right-side{
         border-top-right-radius: 25px !important;
         border-bottom-right-radius: 25px !important;
+        border: 1px solid #000000;
+        
     }
 
 
 }
+#left-side{
+    background-color: $light;
+}
+#right-side{
+    background-color: $dark;
+}
 
+.bigItem-container {
+    display: none ;
+}
+.error{
+    display: none;
+}

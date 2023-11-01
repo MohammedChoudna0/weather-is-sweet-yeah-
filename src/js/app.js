@@ -12,6 +12,11 @@ $(function() {
         $(".items-container").show();
         $(".bigItem-container").hide();
     });
+    $(".dark-mode-button").on('click', function() {
+        $("body").toggleClass("dark-mode");
+        
+    });
+    
 });
 
 
