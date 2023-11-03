@@ -1,4 +1,15 @@
 .forecast-container{
     border:1px solid ;
     border-radius: 15px;
+    display:none ; 
 }
+.day1 {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.day5 {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+

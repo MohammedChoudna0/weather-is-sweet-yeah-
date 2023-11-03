@@ -1,9 +1,5 @@
 var apiKey = "4ac922fbb80b818412473ff51a5be5d0";
 
-
-
-
-
 function getCoordinates(city) {
   var apiUrl =
     "http://api.openweathermap.org/geo/1.0/direct?q=" +
@@ -18,7 +14,9 @@ function getCoordinates(city) {
       } else {
         reject("No se ha encontrado información de " + city);
         $(".bigItem-container").hide();
+        $(".forecast-container").hide();
         $(".error").show();
+
         return ;
 
       }
@@ -57,22 +55,21 @@ async function getWeatherByCity(city) {
   }
 }
 
-// Datos de ejemplo
 var data = [
-  { city: "Washington" }, // Estados Unidos
-  { city: "London" }, // Reino Unido
-  { city: "Paris" }, // Francia
-  { city: "Berlin" }, // Alemania
-  { city: "Tokyo" }, // Japón
-  { city: "Beijing" }, // China
-  { city: "Moscow" }, // Rusia
-  { city: "Canberra" }, // Australia
-  { city: "Ottawa" }, // Canadá
-  { city: "Brasília" }, // Brasil
-  { city: "Cairo" }, // Egipto
-  { city: "Rome" }, // Italia
-  { city: "Mexico City" }, // México
-  { city: "Madrid" }, // España
+  { city: "Washington" }, 
+  { city: "London" }, 
+  { city: "Paris" }, 
+  { city: "Berlin" }, 
+  { city: "Tokyo" }, 
+  { city: "Beijing" }, 
+  { city: "Moscow" }, 
+  { city: "Canberra" }, 
+  { city: "Ottawa" }, 
+  { city: "Brasília" }, 
+  { city: "Cairo" }, 
+  { city: "Rome" }, 
+  { city: "Mexico City" }, 
+  { city: "Madrid" }, 
 ];
 
 $(function () {
@@ -182,13 +179,13 @@ $(function () {
 
         $("#" + item.city).on("click", function () {
           updateWeatherInfo(item.city);
+          updateForecastInfo(item.city);
           $(".bigItem-container").show();
           $(".items-container").hide();
         });
       })
 
   });
-
 
   $("#location-form").on("submit", function (event) {
     event.preventDefault();
@@ -207,7 +204,7 @@ $(function () {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
         console.log("Latitud: " + lat + ", Longitud: " + lon);
-        updateWeatherInfoByCoordinates(lat, lon).then(() => {
+        updateWeatherInfoByCoordinates(lat, lon).then(updateForecastInfoByCoordinates(lat,lon)).then(() => {
           // Oculta el loader una vez que se completa la llamada AJAX
           $("#loader").hide();
           $(".error").hide();
@@ -304,8 +301,6 @@ $(function () {
     });
   }
   
-
-  
   function getWeatherImage(icon) {
     var image;
     switch (icon) {
@@ -345,6 +340,9 @@ $(function () {
       case "13n":
         image = "13n";
         break;
+      case "50d":
+      case "50n":
+        image = "50d";
       default:
         image = "default";
     }
@@ -378,6 +376,50 @@ $(function () {
       }
         // 'data.list' es un array que contiene los pronósticos para los próximos 5 días cada 3 horas
         var forecasts = data.list;
+        // Filtramos los pronósticos para obtener uno por día
+        var dailyForecasts = forecasts.filter((forecast, index) => index % 8 === 0);
+  
+        // Vaciamos el contenedor de pronóstico
+        $(".forecast-container .row").empty();
+        
+        // Creamos un nuevo div para cada pronóstico diario
+        dailyForecasts.forEach((forecast, index) => {
+          var date = new Date(forecast.dt * 1000);  // La fecha del pronóstico
+          var temperature = Math.round(forecast.main.temp - 273.15); 
+          var weatherIcon = forecast.weather[0].icon;  // El icono del tiempo
+          var image = getWeatherImage(weatherIcon)
+          var forecastDiv = `
+          <div class="col-12 col-md border day${index + 1} d-flex flex-column justify-content-center align-items-center">
+          <p>${date.toDateString()}</p>
+          <picture>
+            <source srcset="build/img/${image}.avif" type="image/avif">
+            <source srcset="build/img/${image}.webp" type="image/webp">
+            <img loading="lazy" src="build/img/${image}.jpg" alt="">
+          </picture>
+
+          <p class="fw-bold">${temperature} °C</p>
+          </div>
+          `;
+          $(".forecast-container").show();
+          // Añadimos el div al contenedor de pronóstico
+          $(".forecast-container .row").append(forecastDiv);
+        });
+      })
+      .catch(error => {
+        console.error(error);  // Aquí puedes manejar los errores
+      });
+  }
+
+  function updateForecastInfoByCoordinates(lat, lon) {
+    getForecast(lat, lon)
+      .then(data => {
+        if (!data){
+          console.log("There is no forecast !!");
+          return;
+      }
+        console.log("Ha entrado");
+        // 'data.list' es un array que contiene los pronósticos para los próximos 5 días cada 3 horas
+        var forecasts = data.list;
   
         // Filtramos los pronósticos para obtener uno por día
         var dailyForecasts = forecasts.filter((forecast, index) => index % 8 === 0);
@@ -387,22 +429,26 @@ $(function () {
   
         // Creamos un nuevo div para cada pronóstico diario
         dailyForecasts.forEach((forecast, index) => {
+          console.log("Ha en "+ index);
+
           var date = new Date(forecast.dt * 1000);  // La fecha del pronóstico
           var temperature = Math.round(forecast.main.temp - 273.15); 
           var weatherIcon = forecast.weather[0].icon;  // El icono del tiempo
           var image = getWeatherImage(weatherIcon)
           var forecastDiv = `
-            <div class="col-12 col-md border day${index + 1}">
-              <picture>
-                <source srcset="build/img/${image}.avif" type="image/avif">
-                <source srcset="build/img/${image}.webp" type="image/webp">
-                <img loading="lazy" src="build/img/${image}.jpg" alt="">
-              </picture>
-              <p>${date.toDateString()}</p>
-              <p>${temperature} °C</p>
-            </div>
+          <div class="col-12 col-md border day${index + 1} d-flex flex-column justify-content-center align-items-center">
+          <p>${date.toDateString()}</p>
+
+          <picture>
+            <source srcset="build/img/${image}.avif" type="image/avif">
+            <source srcset="build/img/${image}.webp" type="image/webp">
+            <img loading="lazy" src="build/img/${image}.jpg" alt="">
+          </picture>
+          <p class="fw-bold">${temperature} °C</p>
+          </div>
+        
           `;
-  
+          $(".forecast-container").show();
           // Añadimos el div al contenedor de pronóstico
           $(".forecast-container .row").append(forecastDiv);
         });
@@ -410,9 +456,6 @@ $(function () {
       .catch(error => {
         console.error(error);  // Aquí puedes manejar los errores
       });
-  }
-  
-  
-  
+}
 });
 
