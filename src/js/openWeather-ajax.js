@@ -55,7 +55,6 @@ async function getWeatherByCity(city) {
   }
 }
 
-// Datos de ejemplo
 var data = [
   { city: "Washington" }, 
   { city: "London" }, 
@@ -302,8 +301,6 @@ $(function () {
     });
   }
   
-
-  
   function getWeatherImage(icon) {
     var image;
     switch (icon) {
@@ -460,9 +457,5 @@ $(function () {
         console.error(error);  // Aquí puedes manejar los errores
       });
 }
-
-  
-  
-  
 });
 
