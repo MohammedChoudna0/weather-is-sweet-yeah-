@@ -27,10 +27,11 @@ Este comando instalará todas las dependencias necesarias para el proyecto que s
 Abrir la aplicación: Finalmente, abre tu navegador .
 
 
-Como alternativa , puedes pegar el la siguiente linea en head de index.html : 
-         
+Como alternativa , puedes incluir jQuery en tu proyecto, puedes agregar la siguiente línea en la sección head de tu archivo index.html:
+                    
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+En este proyecto, NO es necesario incluir la biblioteca de Bootstrap directamente en tus archivos HTML. Esto se debe a que el código de Bootstrap ya ha sido compilado y está incluido en la carpeta build.
 
 
           
