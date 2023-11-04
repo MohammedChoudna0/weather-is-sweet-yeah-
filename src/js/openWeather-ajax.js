@@ -2,7 +2,7 @@ var apiKey = "4ac922fbb80b818412473ff51a5be5d0";
 
 function getCoordinates(city) {
   var apiUrl =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     city +
     "&limit=50&appid=" +
     apiKey;
@@ -82,11 +82,9 @@ $(function () {
         var windSpeedKmh = (weatherInfo.wind.speed * 3.6).toFixed(1);
         var humidity = weatherInfo.main.humidity;
         var icon = weatherInfo.weather[0].icon;
-        console.log(icon);
-
+  
         var image = getWeatherImage(icon);
 
-        console.log(item.city);
         // Aquí puedes usar tempCelsius y windSpeedKmh
         var element = `<div class="col-12 col-md-6 col-lg-4 " id="${item.city}">
       <div
@@ -190,7 +188,6 @@ $(function () {
   $("#location-form").on("submit", function (event) {
     event.preventDefault();
     var location = $("#location-input").val();
-    console.log(location);
     updateWeatherInfo(location);
     updateForecastInfo(location);
   });
@@ -203,7 +200,6 @@ $(function () {
       navigator.geolocation.getCurrentPosition(function (position) {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
-        console.log("Latitud: " + lat + ", Longitud: " + lon);
         updateWeatherInfoByCoordinates(lat, lon).then(updateForecastInfoByCoordinates(lat,lon)).then(() => {
           // Oculta el loader una vez que se completa la llamada AJAX
           $("#loader").hide();
@@ -349,7 +345,7 @@ $(function () {
     return image;
   }
   function getForecast(lat, lon) {
-    var apiUrl = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
+    var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
   
     return new Promise(function(resolve, reject) {
       $.ajax({
@@ -417,7 +413,7 @@ $(function () {
           console.log("There is no forecast !!");
           return;
       }
-        console.log("Ha entrado");
+
         // 'data.list' es un array que contiene los pronósticos para los próximos 5 días cada 3 horas
         var forecasts = data.list;
   
@@ -429,7 +425,6 @@ $(function () {
   
         // Creamos un nuevo div para cada pronóstico diario
         dailyForecasts.forEach((forecast, index) => {
-          console.log("Ha en "+ index);
 
           var date = new Date(forecast.dt * 1000);  // La fecha del pronóstico
           var temperature = Math.round(forecast.main.temp - 273.15); 
