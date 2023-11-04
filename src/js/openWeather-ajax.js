@@ -82,11 +82,9 @@ $(function () {
         var windSpeedKmh = (weatherInfo.wind.speed * 3.6).toFixed(1);
         var humidity = weatherInfo.main.humidity;
         var icon = weatherInfo.weather[0].icon;
-        console.log(icon);
-
+  
         var image = getWeatherImage(icon);
 
-        console.log(item.city);
         // Aquí puedes usar tempCelsius y windSpeedKmh
         var element = `<div class="col-12 col-md-6 col-lg-4 " id="${item.city}">
       <div
@@ -190,7 +188,6 @@ $(function () {
   $("#location-form").on("submit", function (event) {
     event.preventDefault();
     var location = $("#location-input").val();
-    console.log(location);
     updateWeatherInfo(location);
     updateForecastInfo(location);
   });
@@ -203,7 +200,6 @@ $(function () {
       navigator.geolocation.getCurrentPosition(function (position) {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
-        console.log("Latitud: " + lat + ", Longitud: " + lon);
         updateWeatherInfoByCoordinates(lat, lon).then(updateForecastInfoByCoordinates(lat,lon)).then(() => {
           // Oculta el loader una vez que se completa la llamada AJAX
           $("#loader").hide();
