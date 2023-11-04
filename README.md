@@ -18,7 +18,7 @@ Para probar nuestra aplicación del tiempo, simplemente [**haz clic aquí**](htt
 Para comenzar a utilizar la aplicación, sigue estos sencillos pasos:
 -Clona el repositorio en tu máquina local utilizando el comando
           
-          git clone 
+    git clone 
 
 -Instalar las dependencias: Navega hasta el directorio del proyecto y ejecuta 
 
