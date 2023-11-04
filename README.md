@@ -28,7 +28,7 @@ Este comando instalará todas las dependencias necesarias para el proyecto que s
           
 ## 💻 Mockups del Proyecto
 
-![all-devices-black](https://github.com/MohammedChoudna0/weather-is-sweet-yeah-/assets/117014262/a8bc3cdd-9290-403a-aee0-f2e449730517)
+![all-devices-black](https://github.com/MohammedChoudna0/weather-is-sweet-yeah-/assets/117014262/b7c7b583-fce0-445d-8324-1383558e8bb4)
 
 
 ## ⚙️ Prerrequisitos
