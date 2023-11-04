@@ -4,7 +4,7 @@ node_modules/
 
 *.log
 
-build/
+
 *.tmp
 *.swp
 *.swo
