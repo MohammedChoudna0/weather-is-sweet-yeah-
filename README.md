@@ -20,11 +20,13 @@ Clona el repositorio en tu máquina local utilizando el comando
           
     git clone 
 
--Instalar las dependencias: Navega hasta el directorio del proyecto y ejecuta 
+Instalar las dependencias: Navega hasta el directorio del proyecto y ejecuta 
 
     npm install
 Este comando instalará todas las dependencias necesarias para el proyecto que se especifican en el archivo package.json.
--Abrir la aplicación: Finalmente, abre tu navegador 
+Abrir la aplicación: Finalmente, abre tu navegador .
+
+
           
 ## 💻 Mockups del Proyecto
 
