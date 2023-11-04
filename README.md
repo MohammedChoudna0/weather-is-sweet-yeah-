@@ -41,7 +41,7 @@ Este comando instalará todas las dependencias necesarias para el proyecto que s
 
 ## 🚀 Despliegue 
 
-Nuestra  web está alojada en Netlify, una plataforma de despliegue y alojamiento en la nube. 
+Nuestra  web está alojada en Netlify, una plataforma de despliegue y alojamiento en la nube. Enlace : https://weather-is-sweet-yeah.netlify.app/ .
 
 
 ## 🖊️ Autor
