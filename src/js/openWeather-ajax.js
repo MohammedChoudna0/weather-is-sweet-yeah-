@@ -2,7 +2,7 @@ var apiKey = "4ac922fbb80b818412473ff51a5be5d0";
 
 function getCoordinates(city) {
   var apiUrl =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     city +
     "&limit=50&appid=" +
     apiKey;
@@ -345,7 +345,7 @@ $(function () {
     return image;
   }
   function getForecast(lat, lon) {
-    var apiUrl = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
+    var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
   
     return new Promise(function(resolve, reject) {
       $.ajax({
@@ -413,7 +413,7 @@ $(function () {
           console.log("There is no forecast !!");
           return;
       }
-        console.log("Ha entrado");
+
         // 'data.list' es un array que contiene los pronósticos para los próximos 5 días cada 3 horas
         var forecasts = data.list;
   
@@ -425,7 +425,6 @@ $(function () {
   
         // Creamos un nuevo div para cada pronóstico diario
         dailyForecasts.forEach((forecast, index) => {
-          console.log("Ha en "+ index);
 
           var date = new Date(forecast.dt * 1000);  // La fecha del pronóstico
           var temperature = Math.round(forecast.main.temp - 273.15); 
