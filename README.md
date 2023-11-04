@@ -27,6 +27,12 @@ Este comando instalará todas las dependencias necesarias para el proyecto que s
 Abrir la aplicación: Finalmente, abre tu navegador .
 
 
+Como alternativa , puedes pegar el la siguiente linea en head de index.html : 
+         
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
           
 ## 💻 Mockups del Proyecto
 
